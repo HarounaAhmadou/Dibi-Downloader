@@ -1,0 +1,261 @@
+PARTIE 1
+
+Voici la version mise à jour et enrichie de la description complète de l'application, prenant en compte toutes vos nouvelles spécifications et ajustements.
+
+---
+
+Quand on lance l'application, une grande fenêtre s'ouvre sur l'écran. Elle est découpée en deux zones principales : à gauche, une bande verticale sombre qui sert de menu de navigation (la barre latérale), et à droite, un grand espace d'affichage qui change d'apparence selon l'onglet sélectionné.
+
+---
+
+### 1. La barre latérale (Le menu de navigation à gauche)
+
+Sur cette bande située tout à gauche de l'écran, trois grands boutons superposés permettent de changer d'écran :
+
+1. **Sites à télécharger** (représenté par une icône de globe ou de réseau) : c'est l'écran principal qui intègre le navigateur web pour explorer Internet.
+2. **Gestion des téléchargements** (représenté par une icône de nuage ou de flèche) : c'est le tableau de bord pour suivre, mettre en pause ou retrouver tous les fichiers récupérés.
+
+
+3. **Paramètres** (représenté par une icône d'engrenage) : c'est le centre de contrôle pour régler toutes les options de l'application.
+
+
+
+---
+
+### 2. Premier onglet : "Sites à télécharger" (Le navigateur intégré)
+
+Quand on clique sur le premier bouton en haut du menu latéral, le grand espace de droite se transforme en navigateur Internet adapté à la recherche vidéo.
+
+* **La barre de navigation intelligent tout en haut :**
+* Des flèches de navigation pour revenir en arrière ou avancer entre les pages visitées, ainsi qu'un bouton de rafraîchissement.
+* Une **barre d'adresse blanche** au centre :
+* Si l'utilisateur tape une adresse web valide (ex: `[https://www.facebook.com](https://www.facebook.com)`), le site correspondant s'affiche directement.
+* **Si ce qui est tapé n'est pas un lien web**, l'application le considère automatiquement comme une requête de recherche et ouvre la page de résultats de recherche YouTube correspondante.
+
+
+
+
+* **La barre de raccourcis rapides (juste en dessous) :**
+* Quatre grands boutons-icônes cliquables : **YouTube**, **TikTok**, **Instagram** et **Facebook**.
+* Un clic sur l'un de ces boutons ouvre immédiatement la page d'accueil du service choisi.
+
+
+* **Le grand espace de visualisation (La zone web) :**
+* Par défaut, cet espace charge la page d'accueil complète de YouTube (ou du site configuré). On peut naviguer normalement, se connecter à son compte, lire des Shorts, faire des recherches ou parcourir des chaînes.
+* Chaque vidéo dispose d'un bouton ou widget de téléchargement individuel.
+
+
+* **Système de sélection multiple (Mode Batch) :**
+* L'utilisateur peut effectuer un **clic long** (ou utiliser des cases à cocher superposées sur les vignettes) pour sélectionner plusieurs vidéos ou médias en même temps sur la page.
+* Dès que plusieurs éléments sont sélectionnés, une **barre d'action flottante en bas de l'écran** apparaît avec un bouton **« Télécharger la sélection (X) »**, permettant de lancer le téléchargement groupé de tous les médias choisis en un seul clic.
+
+
+
+---
+
+### 3. La fenêtre surgissante (Pop-up de choix de format)
+
+Quand on clique sur le bouton **"Télécharger"** d'une vidéo (ou sur la confirmation d'une sélection multiple), une fenêtre pop-up vient se superposer au centre de l'écran :
+
+* **Le titre principal :** Indique « Télécharger la vidéo en ».
+
+
+* **La section "Musique" (Audio) :** Propose les extractions sonores (**"Rapide"**, **"MP3 classique"**, etc.) avec la taille estimée du fichier à côté.
+
+
+* **La section "Vidéo" (Image et son) :** Propose les différentes résolutions (**"240p"**, **"720p"**, **"1080p"**, etc.) avec leur poids estimé.
+
+
+* **La section "Plus de formats" :** Déplie la liste exhaustive de tous les formats techniques bruts détectés par `yt-dlp`.
+
+
+* **Le bouton de confirmation :** Un grand bouton marqué **"Télécharger"** lance le traitement en arrière-plan.
+
+
+
+---
+
+### 4. Deuxième onglet : "Gestion des téléchargements"
+
+Quand on clique sur le deuxième bouton de la barre latérale, l'espace principal affiche la liste complète des tâches :
+
+* **Les filtres de catégories (en haut) :** Quatre boutons de tri (**Tous**, **Audio**, **Vidéos**, **Images**).
+
+
+* **La section "Téléchargement" (En cours) :** Maintient la liste des fichiers en cours de transfert avec barre de progression bleue, pourcentage, vitesse en temps réel (MB/s) et boutons Pause/Reprendre/Annuler.
+
+
+* **La section "Téléchargé" (Historique) :** Répertorie les médias finalisés avec leurs informations (durée, taille, aperçu) et un menu d'options (ouvrir le fichier, afficher dans le dossier, supprimer).
+
+
+
+---
+
+### 5. Troisième onglet : "Paramètres"
+
+Quand on clique sur le dernier bouton de la barre latérale, la page de configuration s'ouvre, découpée en trois blocs d'options :
+
+* **Bloc "TÉLÉCHARGEMENT" :**
+* **Chemin de téléchargement :** Sélection du dossier de destination sur le disque dur (ex: `~/Téléchargements`).
+
+
+* **Nombre max. de téléchargements :** Réglage du nombre de téléchargements simultanés autorisés (ex: `3 tâches`).
+
+
+* **Formats et Qualités par défaut (Nouveau fonctionnement) :**
+* Cette option ne sert pas à choisir un fichier, mais ouvre un panneau de configuration répertoriant **tous les formats supportés**, divisé en deux catégories distinctes : **Audio** (MP3, AAC, M4A, FLAC, OPUS...) et **Vidéo** (1080p, 720p, 480p, MP4, WEBM...).
+* L'utilisateur peut cocher ou sélectionner les formats qu'il souhaite activer par défaut.
+* Ces formats pré-cochés seront automatiquement appliqués ou proposés en priorité lors du déclenchement d'un téléchargement direct.
+
+
+
+
+* **Bloc "APPLICATION" :**
+* **Apparence :** Commutation entre thème clair et thème sombre.
+
+
+* **Langue de l'application :** Sélection de la langue de l'interface.
+
+
+* **Notifications :** Activation des alerte de fin de téléchargement.
+
+
+* **Historique de recherche :** Bouton pour effacer l'historique de la barre d'adresse et des recherches.
+
+
+
+
+* **Bloc "INFOS" :**
+* **Compte :** Gestion des sessions et des cookies enregistrés (pour garder la connexion aux comptes).
+
+
+* **Commentaires / Partager / À propos :** Liens d'informations et version du logiciel (ex: `v0.1.0`).
+
+
+
+
+AUTRES CONDITIONS ET REGLE :
+
+## 1. Navigation Web, Recherche et Compatibilité des Sites
+
+### A. Saisie d'une recherche textuelle au lieu d'un lien (URL)
+
+* **Problématique :** Si l'utilisateur saisit un mot-clé (ex: *"musique afrobeats 2026"*) au lieu d'une adresse complète (`https://...`), le composant `QWebEngineView` risque de renvoyer une erreur de résolution DNS ou d'afficher une page introuvable.
+* **Solution :**
+1. Intercepter la saisie avec une fonction de validation d'URL (expression régulière / RegEx).
+2. Si le texte ne contient ni protocole (`http://` ou `https://`) ni domaine valide (`.com`, `.org`, etc.), encoder le texte sous forme de requête Web.
+3. Rediriger automatiquement le navigateur vers le moteur de recherche de YouTube :
+`[https://www.youtube.com/results?search_query=VOTRE_REQUETE_ENCODEE](https://www.youtube.com/results?search_query=VOTRE_REQUETE_ENCODEE)`
+
+
+
+### B. Navigation sur un site sans média ou incompatible avec yt-dlp
+
+* **Problématique :** L'utilisateur navigue sur un blog textuel, un site d'actualités non supporté ou une page sans aucun flux vidéo/audio extractible.
+* **Solution :**
+1. **État passif du bouton :** Le bouton d'action de téléchargement reste grisé (désactivé) ou passe dans un état neutre (icône grisée avec indication *"Aucun média détecté"*).
+2. **Analyse asynchrone :** À chaque changement d'URL dans `QWebEngineView`, lancer une vérification rapide d'extraction de métadonnées en arrière-plan sans télécharger. Si `yt-dlp` renvoie une exception `UnsupportedError`, masquer l'option de téléchargement.
+3. **Message d'information :** Si l'utilisateur force le clic, afficher un message d'avertissement discret : *« Aucun média compatible yt-dlp n'a été détecté sur cette page. »*
+
+
+
+### C. Bloqueurs, Captchas, Restrictions d'âge et Authentification
+
+* **Problématique :** YouTube ou Instagram demande un Captcha, requiert une vérification d'âge ou restreint la vidéo aux utilisateurs connectés, provoquant l'échec de `yt-dlp`.
+* **Solution :**
+1. Puisque l'application utilise `QWebEngineView`, l'utilisateur résout le Captcha ou se connecte à son compte directement au sein du navigateur intégré.
+2. Pour transmettre l'authentification à `yt-dlp`, extraire la session de cookies du profil `QWebEngineProfile` persistant et la passer à l'exécutable `yt-dlp` via le paramètre `--cookies` ou via un fichier temporaire `cookies.txt`.
+
+
+
+---
+
+## 2. Sélection Multiple (Batch Download) et Conflits de Formats
+
+### A. Présentation du widget de déclenchement pour la sélection multiple
+
+* **Problématique :** Comment permettre à l'utilisateur de sélectionner plusieurs vidéos sans surcharger la page Web, et où placer l'action de validation ?
+* **Solution :**
+1. **Mode Sélection (Overlay) :** Lorsqu'un clic long ou une case à cocher est activé sur un élément, afficher un cadre visuel (bordure bleue + coche) sur chaque miniature sélectionnée.
+2. **Barre d'action flottante (Floating Action Bar) :** Faire apparaître une barre ancrée en bas de l'écran contenant :
+* Le nombre d'éléments sélectionnés (ex: *"3 éléments sélectionnés"*).
+* Un bouton *"Tout désélectionner"*.
+* Un bouton principal coloré *"Télécharger la sélection (3)"*.
+
+
+
+
+
+### B. Attribution des formats lors d'un téléchargement groupé
+
+* **Problématique :** Configurer manuellement le format vidéo de 15 éléments présélectionnés un par un devient fastidieux.
+* **Solution :**
+1. Lors du clic sur *"Télécharger la sélection"*, ouvrir une boîte de dialogue globale proposant deux modes :
+
+
+* **Mode Profil de masse (Par défaut) :
+on peut inclure les meme options que lorsque la video est telecharger en une seule c'a dire selectionner un format et le systeme va se debrouiller pour telecharger tout ces medias dans ce format ou a peu pres quand le format est Indisponible chez d'autres .
+
+selon le lien https://github.com/yt-dlp/yt-dlp#readme , quels sont les commandes , actions yt-dlp qui vont enormement nous aider ?
+
+
+
+
+### C. Incompatibilité entre le format par défaut et les résolutions réelles de la vidéo
+
+* **Problématique :** L'utilisateur a défini une qualité par défaut de `1080p` dans ses Paramètres, mais l'une des vidéos sélectionnées n'existe qu'en `480p` max, ou ne propose pas le conteneur demandé (`.mp4`).
+
+
+* **Solution :**
+1. **Politique de Repli (Fallback Syntax) :** Ne jamais imposer une résolution stricte dans `yt-dlp`, mais utiliser une chaîne de formats de secours :
+`format = "bestvideo[height<=1080]+bestaudio/best[height<=1080]/best"`
+2. **Fonctionnement :** `yt-dlp` va chercher la résolution `1080p`. Si elle n'existe pas, il sélectionnera automatiquement la plus haute résolution immédiatement inférieure disponible (ex: `720p` ou `480p`) sans interrompre le processus ni générer d'erreur.
+
+
+
+---
+
+## 3. Stabilité, Gestion Réseau et Erreurs Système
+
+### A. Blocage de l'interface utilisateur pendant l'analyse des métadonnées (GUI Freeze)
+
+* **Problématique :** L'extraction des formats d'une vidéo ou d'une playlist par `yt-dlp` prend quelques secondes. Réaliser cette opération sur le thread principal bloque l'ensemble de l'interface graphique PyQt6 (fenêtre figée).
+* **Solution :**
+1. Déporter **toutes** les commandes `yt-dlp` (analyse et téléchargement) dans des threads secondaires (`QThread` ou `QRunnable` via `QThreadPool`).
+2. Afficher un indicateur visuel de chargement (spinner / squelette de chargement) au sein du widget de la vidéo pendant la récupération des tailles et formats.
+
+
+
+
+
+### B. Interruption de connexion réseau en cours de téléchargement
+
+* **Problématique :** Une coupure d'accès Internet survient pendant le transfert d'un gros fichier vidéo.
+* **Solution :**
+1. **Gestion des fragments (`.part`) :** Configurer `yt-dlp` pour conserver les fichiers temporaires non terminés.
+2. **Statut d'erreur et reprise :** Intercepter l'erreur réseau via le `progress_hooks` de `yt-dlp`. Passer l'élément dans la liste des téléchargements au statut *« Erreur / Interrompu »* avec une icône rouge.
+
+
+3. Ajouter un bouton *"Reprendre"* permettant de relancer `yt-dlp` là où il s'était arrêté sans reprendre le téléchargement depuis le début.
+
+
+
+### C. Gestion des doublons et saturation de l'espace disque
+
+* **Problématique :** L'utilisateur tente de télécharger la même vidéo deux fois ou n'a plus assez d'espace disponible sur son disque dur.
+* **Solution :**
+1. **Vérification de l'espace disque :** Avant le lancement du Worker `QThread`, calculer l'espace libre dans le dossier de destination à l'aide du module Python `shutil.disk_usage()`. Si l'espace est inférieur à la taille estimée du média, bloquer le lancement et alerter l'utilisateur.
+2. **Modèle de nommage unique :** Utiliser les identifiants uniques de `yt-dlp` dans le modèle de sortie :
+`outtmpl = "%(title)s [%(id)s].%(ext)s"`
+Ceci empêche l'écrasement involontaire de fichiers portant des noms identiques tout en permettant de détecter si un identifiant exact a déjà été finalisé.
+
+
+
+### D. Obsolescence des extracteurs de sites (Mises à jour des plateformes)
+
+* **Problématique :** YouTube, TikTok ou Facebook modifient fréquemment leurs algorithmes internes, ce qui rend la version actuelle de `yt-dlp` subitement inopérante.
+* **Solution :**
+1. Intégrer un système de mise à jour automatique ou à la demande du binaire/paquet `yt-dlp` au démarrage de l'application ou via l'onglet des Paramètres.
+
+
+2. Exécuter la commande de mise à jour en tâche de fond (`yt-dlp -U` ou mise à jour du module `pip`) et notifier l'utilisateur dès qu'un correctif de compatibilité est appliqué.
